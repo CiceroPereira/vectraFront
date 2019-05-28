@@ -1,0 +1,26 @@
+<form [formGroup]="pessoaForm" (ngSubmit)="addPessoa(pessoaForm.value)">
+  <div class="form-group">
+    <label for="email">Nome:</label>
+    <input type="text" class="form-control" id="nome" name="nome" formControlName="nome">
+  </div>
+  <div class="form-group">
+    <label for="cpf">CPF:</label>
+    <input type="text" class="form-control" id="cpf" name="cpf" formControlName="cpf">
+   
+  </div>
+  <div class="form-group">
+    <label for="cpf">Peso:</label>
+    <input type="number" class="form-control" id="peso" name="peso" formControlName="peso">
+  </div>
+  <div class="form-group">
+    <label for="cpf">Altura:</label>
+    <input type="number" class="form-control" id="altura" name="altura" formControlName="altura">
+  </div>
+
+  <div class="form-group">
+    <input type="hidden" value="" class="form-control" id="imc" name="imc" formControlName="imc">
+  </div>
+
+  <button type="submit" [disabled]="!pessoaForm.valid" class="btn btn-block btn-primary">Submit</button>
+</form>
+

@@ -1,0 +1,26 @@
+<table class="table table-bordered">
+    <thead>
+      <tr>
+      	<th>#</th>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Altura</th>
+        <th>Peso</th>
+        <th>IMC</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pessoa of dataSource; index as i">
+      	<td>{{ i + 1 }}</td>
+        <td>{{pessoa.nome}}</td>
+        <td>{{pessoa.cpf}}</td>
+        <td>{{pessoa.altura}}</td>
+        <td>{{pessoa.peso}}</td>
+        <td>{{pessoa.imc}}</td>
+        <td><button class="btn btn-block btn-danger" (click)="deletePessoa(pessoa.id)">Excluir</button></td>
+      </tr>
+     
+    </tbody>
+  </table>
+
